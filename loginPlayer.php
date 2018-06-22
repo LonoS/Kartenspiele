@@ -1,3 +1,111 @@
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../Kartenspiele/CSS-Files/loginStyle.css">
+
+
+</head>
+<body>
+<form action="loginPlayer.php" method="post" style="display: flex;">
+
+
+
+    <div class="sheet">
+        <h1 class="ueberschrift">Kratzen</h1>
+        <h3 id="unter-ueberschrift" class="unter-ueberschrift">Anmelden</h3>
+
+        <p id="beschreibung1" class="beschreibung">Benutzername</p>
+        <input id="input1" class="username" autocomplete="off" type="text" name="username" placeholder="Nutzername">
+
+        <p id="beschreibung2" class="beschreibung">Raumname</p>
+        <input id="input2" class="potID" autocomplete="off" type="text" name="PotID" placeholder="Raum ID">
+
+        <button id="beitreten" class="beitreten" type="submit">Beitreten</button>
+
+        <button id="erstellen" class="erstellen" type=button style="width:auto;">Raum erstellen</button>
+
+
+
+
+
+    </div>
+
+
+</form>
+
+
+
+
+
+
+
+</body>
+</html>
+
+<script defer="defer">
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+
+    var input1 = $("#input1");
+    var input2 = $("#input2");
+    var unter_ueberschrift = $("#unter-ueberschrift");
+    var beschreibung1 = $("#beschreibung1");
+    var beschreibung2 = $("#beschreibung2");
+    var beitreten = $("#beitreten");
+    var erstellen = $("#erstellen");
+
+
+    console.log(erstellen);
+    var event = erstellen.addEventListener("click", changeToErstellen);
+
+
+    function changeToErstellen() {
+        unter_ueberschrift.innerHTML = "Neuen Raum erstellen";
+
+        beschreibung1.innerHTML = "Neuer Raum";
+        beschreibung2.innerHTML = "Startguthaben";
+
+        input1.name = "RoomName";
+        input2.name = "PotStart";
+
+        input1.placeholder = "RaumID";
+        input2.placeholder = "Startguthaben";
+
+        beitreten.innerHTML = "Erstellen";
+        erstellen.innerHTML = "Anmelden";
+
+        erstellen.removeEventListener(event);
+        event = erstellen.addEventListener("click", changeToBeitreten);
+
+    }
+    function changeToBeitreten() {
+        erstellen.addEventListener("click", changeToErstellen);
+
+        unter_ueberschrift.innerHTML = "Anmelden";
+
+        beschreibung1.innerHTML = "Nutzername";
+        beschreibung2.innerHTML = "Raumname";
+
+        input1.name = "username";
+        input2.name = "potID";
+
+        input1.placeholder = "Nutzername eingeben";
+        input2.placeholder = "Raum-ID";
+
+        beitreten.innerHTML = "Beitreten";
+        erstellen.innerHTML = "Raum beitreten";
+
+
+        changeToErstellen();
+
+    }
+
+</script>
+
 <?php
 $host = "localhost";
 $datenbank = "Kratzen";
@@ -66,33 +174,4 @@ elseif (isset($_POST["RoomName"]) && !($_POST["RoomName"] === "") && isset($_POS
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-<form action="loginPlayer.php" method="post">
-    <h3>Als Spieler anmelden</h3>
-    <p>Username</p>
-    <p><input type="text" name="username"></p>
 
-    <p>Deine Pot ID:</p>
-    <p><input type="text" name="PotID"></p>
-
-    <p><button type="submit">Beitreten</button></p>
-
-    <h3>Neuen Spielraum erstellen</h3>
-
-    <p>Spielraumname: </p>
-    <p><input type="text" name="RoomName"></p>
-
-    <p>Startguthaben:</p>
-    <p><input type="text" name="PotStart"></p>
-    <p><button type="submit">Erstellen</button></p>
-
-</form>
-
-</body>
-</html>

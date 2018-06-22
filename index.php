@@ -147,5 +147,10 @@ echo "<p>Dein Guthaben beträgt: $userAmmount</p>";
 
 </form>
 
+
+
+
+
+
 </body>
 </html>
