@@ -50,13 +50,15 @@ init();
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../Kartenspiele/CSS-Files/indexPodStyle.css">
+
 </head>
 <meta http-equiv="refresh" content="2" >
 <body>
 <?php
-echo "<p style='text-align: right'>Pot ID: $ID</p>";
-echo "<h1 style='text-align: center'>Room $Name</h1>";
-echo "<h3 style='text-align: center'>Pot-Guthaben: $Guthaben €</h3>";
+echo "<p style='text-align: right' class='podID'>Pot ID: $ID</p>";
+echo "<h1 style='text-align: center' class='room'>Room $Name</h1>";
+echo "<h3 style='text-align: center' class='podGuthaben'>Pot-Guthaben: $Guthaben €</h3>";
 
 ?>
 

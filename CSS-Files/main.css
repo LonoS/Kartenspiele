@@ -1,0 +1,165 @@
+html{
+    background: radial-gradient(circle at center, #0e4b0d, #1c9219);
+    padding: 0;
+    margin: 0;
+    font-family: "SF Pro Display";
+    
+}
+
+.welcomeField{
+    color: white;
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: left;
+}
+
+
+.container{
+    background: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+.menuBand{
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+    background-color: white;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+
+}
+
+
+.pod{
+    color: white;
+    margin-left: 1rem;
+}
+
+.guthaben{
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+.buttons{
+    display:block;
+    width:100px;
+    height:100px;
+    line-height:50px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #464646;
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+    transition: 0.4s;
+    margin: 1rem;
+}
+
+.buttons:hover{
+    background-color: #aaaaaa;
+}
+
+.buttonsContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    width: 50%;
+    border-bottom: 4px #1c9219 solid;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+li:hover{
+    background-color: darkgrey;
+    color: white;
+
+
+
+}
+
+li .add{
+    border-radius: 1rem 0rem 0 0;
+
+}
+
+li .remove{
+    border-radius: 0rem 1rem 0 0;
+
+}
+
+.left{
+
+    margin-top: 6rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit{
+
+    margin-top: auto;
+    margin-bottom: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: .25rem;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: #1c9219;
+    padding: 8px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .25s;
+    width: 100%;
+
+}
+
+.submit:hover{
+    background-color: #0e4b0d;
+}
+
+.input{
+    border: none;
+    border-bottom: 2px solid #616161;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+    transition: .25s;
+    font-size: .75rem;
+}
+
+.input:hover,
+.input:focus{
+    width: 91%;
+    border-bottom: 4px solid #1c9219;
+}
